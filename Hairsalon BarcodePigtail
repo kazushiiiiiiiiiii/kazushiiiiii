@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hairsalon BarcodePigtail</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display (Serif) & Inter (Sans-serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #000;
+        }
+        h1, h2 {
+            font-family: 'Playfair Display', serif;
+        }
+        .section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 4rem 1rem;
+        }
+        .gold-line {
+            background-color: #d4af37; /* Gold color */
+            height: 2px;
+            width: 80px;
+            margin: 1.5rem auto;
+        }
+        .barcode-map-pattern {
+            width: 100%;
+            height: 200px;
+            background: repeating-linear-gradient(
+                90deg,
+                #d4af37,
+                #d4af37 2px,
+                #1a1a1a 2px,
+                #1a1a1a 6px
+            );
+            border-radius: 12px;
+        }
+        /* Mobile-first approach, larger screens get wider content */
+        @media (min-width: 768px) {
+            .container-content {
+                max-width: 800px;
+            }
+        }
+        @media (min-width: 1024px) {
+            .container-content {
+                max-width: 1000px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-black text-gray-200">
+
+    <!-- Header Navigation -->
+    <header class="fixed top-0 left-0 right-0 z-50 p-6 flex justify-between items-center">
+        <div class="text-xl md:text-2xl font-bold tracking-wider text-white">
+            Hairsalon BarcodePigtail
+        </div>
+        <nav class="hidden md:flex space-x-8 text-sm font-light">
+            <a href="#menu" class="hover:text-amber-400 transition-colors">MENU</a>
+            <a href="#staff" class="hover:text-amber-400 transition-colors">STAFF</a>
+            <a href="#reserve" class="hover:text-amber-400 transition-colors">RESERVE</a>
+            <a href="#access" class="hover:text-amber-400 transition-colors">ACCESS</a>
+        </nav>
+        <button class="md:hidden text-white focus:outline-none">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+        </button>
+    </header>
+
+    <!-- Top Section -->
+    <div id="top" class="section bg-black">
+        <div class="text-center p-8 container-content mx-auto">
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white tracking-widest leading-tight">
+                Hairsalon BarcodePigtail
+            </h1>
+            <div class="gold-line"></div>
+            <p class="text-xl md:text-3xl mt-8 tracking-widest text-amber-400 font-serif font-light">
+                髪の毛のキワミをキミの頭に！
+            </p>
+            <p class="mt-4 text-sm md:text-lg text-gray-400 font-light">
+                選べる髪型は、ただひとつ。<br class="md:hidden">それがバーコードおさげ。
+            </p>
+        </div>
+    </div>
+
+    <!-- Menu Section -->
+    <div id="menu" class="section bg-gray-950">
+        <div class="text-center p-8 container-content mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold text-amber-400">MENU</h2>
+            <div class="gold-line"></div>
+            <div class="mt-12 bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-800">
+                <h3 class="text-2xl md:text-3xl font-bold text-white">バーコードおさげ　¥98,765</h3>
+                <p class="mt-6 text-sm md:text-base leading-relaxed text-gray-300 font-light">
+                    世界でただひとつの髪型。<br>
+                    前から見ても、後ろから見ても、極まる存在感。
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Staff Section -->
+    <div id="staff" class="section bg-black">
+        <div class="text-center p-8 container-content mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold text-amber-400">STAFF</h2>
+            <div class="gold-line"></div>
+            <div class="mt-12 flex flex-col md:flex-row md:space-x-8 space-y-8 md:space-y-0 items-center justify-center">
+                <!-- Kiwamist EAN-13 -->
+                <div class="w-full md:w-1/2 p-6 bg-gray-900 rounded-xl shadow-xl border border-gray-800">
+                    <img src="https://placehold.co/300x300/1a1a1a/d4af37?text=EAN-13" alt="キワミストEAN-13の画像" class="mx-auto rounded-full w-40 h-40 object-cover border-4 border-amber-400 mb-6">
+                    <h3 class="text-xl md:text-2xl font-bold text-white">店長：キワミストEAN-13</h3>
+                    <p class="mt-4 text-sm md:text-base text-gray-300 font-light">
+                        「30年間バーコードを磨き上げた孤高の職人」
+                    </p>
+                </div>
+                <!-- QR Apprentice -->
+                <div class="w-full md:w-1/2 p-6 bg-gray-900 rounded-xl shadow-xl border border-gray-800">
+                    <img src="https://placehold.co/300x300/1a1a1a/d4af37?text=QR" alt="QR見習いの画像" class="mx-auto rounded-full w-40 h-40 object-cover border-4 border-amber-400 mb-6">
+                    <h3 class="text-xl md:text-2xl font-bold text-white">アシスタント：QR見習い</h3>
+                    <p class="mt-4 text-sm md:text-base text-gray-300 font-light">
+                        「未来のコードを紡ぐ若き才能」
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Reservation Section -->
+    <div id="reserve" class="section bg-gray-950">
+        <div class="text-center p-8 container-content mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold text-amber-400">RESERVATION</h2>
+            <div class="gold-line"></div>
+            <div class="mt-12 bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-800">
+                <h3 class="text-xl md:text-3xl font-bold text-white">ご予約状況</h3>
+                <p class="mt-6 text-sm md:text-base leading-relaxed text-gray-300 font-light">
+                    当店は世界中から注目を集めております。<br>
+                    そのため、現在の予約状況は……
+                </p>
+                <p class="text-2xl md:text-4xl mt-6 font-bold text-amber-400">
+                    【いつでも満席】
+                </p>
+                <p class="mt-6 text-sm md:text-base leading-relaxed text-gray-300 font-light">
+                    諦めないでください。<br>
+                    あなたが本当に「髪の毛のキワミ」を求めたとき、<br>
+                    扉はきっと開かれるでしょう。
+                </p>
+                <button id="reserve-button" onclick="showReserveMessage()" class="mt-8 px-6 py-3 bg-white text-black font-bold rounded-full transition-transform transform hover:scale-105 hover:bg-amber-400">
+                    キャンセル待ちに登録する
+                </button>
+                <div id="reserve-message" class="hidden mt-6 text-white text-lg font-bold">
+                    キャンセル待ちも満席です
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Access Section -->
+    <div id="access" class="section bg-black">
+        <div class="text-center p-8 container-content mx-auto">
+            <h2 class="text-3xl md:text-5xl font-bold text-amber-400">ACCESS</h2>
+            <div class="gold-line"></div>
+            <div class="mt-12 bg-gray-900 rounded-xl p-8 shadow-xl border border-gray-800">
+                <p class="text-sm md:text-base text-gray-300 font-light">
+                    〒098-7654 刈上市分け目町おさげ筋13-57
+                </p>
+                <div class="barcode-map-pattern mt-6 mb-4"></div>
+                <p class="text-xs text-gray-500 font-light">
+                    （※実際の場所ではありません。当店はあなたの心の中に存在します）
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript for the reservation button -->
+    <script>
+        /**
+         * 予約ボタンがクリックされたときにメッセージを表示する関数
+         */
+        function showReserveMessage() {
+            const messageDiv = document.getElementById('reserve-message');
+            messageDiv.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
